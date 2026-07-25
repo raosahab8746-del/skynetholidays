@@ -129,17 +129,9 @@ const getAvailableParents = (
   domesticStates: StateDestination[],
   internationalCountries: CountryDestination[]
 ) => {
-  const hardcoded = type === 'international' 
-    ? Object.keys(destinationHierarchy.international) 
-    : Object.keys(destinationHierarchy.domestic);
-  
-  const dynamic = type === 'international'
+  return type === 'international'
     ? internationalCountries.map(c => c.name)
     : domesticStates.map(s => s.name);
-  
-  // Combine and remove duplicates, maintaining order (hardcoded first)
-  const allParents = Array.from(new Set([...hardcoded, ...dynamic]));
-  return allParents;
 };
 
 export const AdminDashboard: React.FC = () => {
@@ -901,18 +893,6 @@ export const AdminDashboard: React.FC = () => {
 
         <div className="flex items-center gap-3">
           <button
-            onClick={() => {
-              if (confirm('Are you sure you want to reset all data back to original defaults?')) {
-                resetToDefaultData();
-              }
-            }}
-            className="flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer"
-          >
-            <RefreshCw className="w-3.5 h-3.5" />
-            <span>Reset Demo Data</span>
-          </button>
-
-          <button
             onClick={logoutAdmin}
             className="flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer"
           >
@@ -1151,17 +1131,25 @@ export const AdminDashboard: React.FC = () => {
 
                   <div className="flex items-center gap-2">
                     <button
+                      type="button"
                       onClick={() => {
                         setEditingPackage(pkg);
                         setIsAddingNewPackage(false);
                       }}
-                      className="p-1.5 rounded-lg bg-sky-50 text-[#00AEEF] hover:bg-sky-100"
+                      className="p-3 rounded-xl bg-sky-50 text-[#00AEEF] hover:bg-sky-100 transition-colors cursor-pointer flex items-center justify-center min-w-[44px] min-h-[44px]"
+                      title="Edit Package"
                     >
                       <Edit className="w-4 h-4" />
                     </button>
                     <button
-                      onClick={() => deletePackage(pkg.id)}
-                      className="p-1.5 rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-100"
+                      type="button"
+                      onClick={() => {
+                        if (window.confirm(`Are you sure you want to delete the package "${pkg.title}"? This action cannot be undone.`)) {
+                          deletePackage(pkg.id);
+                        }
+                      }}
+                      className="p-3 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-100 transition-colors cursor-pointer flex items-center justify-center min-w-[44px] min-h-[44px]"
+                      title="Delete Package"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -1406,10 +1394,10 @@ export const AdminDashboard: React.FC = () => {
                                   }
                                 }
                               } else {
-                                alert(`"${parent}" is a core system destination and cannot be deleted.`);
+                                alert(`"${parent}" has already been deleted or is not registered as a database destination.`);
                               }
                             }}
-                            className="opacity-0 group-hover:opacity-100 absolute -top-1.5 -right-1.5 p-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-full border border-rose-200 transition-all cursor-pointer shadow-xs"
+                            className="opacity-100 absolute -top-1.5 -right-1.5 p-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-full border border-rose-200 transition-all cursor-pointer shadow-sm z-10"
                             title={`Delete ${parent}`}
                           >
                             <Trash2 className="w-3.5 h-3.5" />
@@ -3436,7 +3424,7 @@ export const AdminDashboard: React.FC = () => {
             <div className="space-y-1">
               <p className="font-bold">Offline Resilience & Cache Persistence</p>
               <p className="leading-relaxed">
-                All changes you make inside this dashboard are safely persisted in your browser's LocalStorage database. If you wish to undo your changes and reload original placeholder mock content, you can click the <strong>"Reset Demo Data"</strong> button in the main top-right header at any time.
+                All changes you make inside this dashboard are safely persisted in the database.
               </p>
             </div>
           </div>

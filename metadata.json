@@ -1,0 +1,6 @@
+{
+  "name": "SkyNet Holidays",
+  "description": "Premium luxury travel agency offering domestic, international, and weekend tour packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

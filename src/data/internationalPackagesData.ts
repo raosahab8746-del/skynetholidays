@@ -1,0 +1,658 @@
+import { PackageItem } from '../types';
+
+export const internationalPackagesData: PackageItem[] = [
+  // DUBAI
+  {
+    id: "pkg-dubai-1",
+    title: "Dazzling Dubai, Desert Safari & Abu Dhabi Grandeur",
+    slug: "dazzling-dubai-desert-safari-abu-dhabi-grandeur",
+    type: "international",
+    parentSlug: "dubai",
+    parentName: "Dubai",
+    regionName: "Downtown Dubai, Desert Safari, Abu Dhabi",
+    coverImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "5 Days / 4 Nights",
+    nights: 4,
+    days: 5,
+    price: 54999,
+    offerPrice: 44999,
+    discountPercent: 18,
+    description: "Experience the height of luxury in Dubai! Visit 124th floor of Burj Khalifa, experience thrilling Desert Safari dune bashing, and visit Abu Dhabi's Sheikh Zayed Grand Mosque.",
+    highlights: [
+      "Burj Khalifa 124th Floor Observation Deck ticket",
+      "Desert Safari in 4x4 Land Cruiser with Dune Bashing & BBQ Dinner",
+      "Marina Dhow Cruise Dinner with Tanoura Show",
+      "Full Day Abu Dhabi city tour with Grand Mosque entrance"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Dubai Arrival & Marina Dhow Cruise", description: "Arrive in Dubai. Transfer to hotel. Evening luxury Dhow Cruise along Dubai Marina with dinner.", mealsIncluded: "Dinner", overnightStay: "Grand Central Hotel / Similar, Dubai" },
+      { day: 2, title: "Dubai City Tour & Burj Khalifa 124th Floor", description: "Half-day city tour past Dubai Frame, Jumeirah Beach, and Atlantis. Visit Dubai Mall and Burj Khalifa observation deck.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Grand Central Hotel, Dubai" },
+      { day: 3, title: "Desert Safari Dune Bashing & Bedouin Dinner", description: "Afternoon 4x4 Land Cruiser pickup for Desert Safari. Dune bashing, camel rides, quad biking, belly dance & BBQ dinner.", mealsIncluded: "Breakfast & BBQ Dinner", overnightStay: "Grand Central Hotel, Dubai" },
+      { day: 4, title: "Abu Dhabi Grand Mosque & Ferrari World Photo Stop", description: "Full day excursion to Abu Dhabi. Visit Sheikh Zayed Grand Mosque and Ferrari World.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Grand Central Hotel, Dubai" },
+      { day: 5, title: "Shopping & Dubai Departure", description: "Breakfast, last minute gold bazaar shopping, and transfer to airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Grand Central Hotel Dubai", "Millennium Place Marina"],
+    meals: "Breakfast Daily & 4 Dinners",
+    transportation: "Private AC transfers + 4x4 Land Cruiser Safari",
+    sightseeing: ["Burj Khalifa", "Desert Safari", "Grand Mosque Abu Dhabi", "Dubai Marina Dhow Cruise"],
+    inclusions: ["4 Nights Hotel stay", "Burj Khalifa tickets", "Desert Safari", "Dhow Cruise", "UAE Visa"],
+    exclusions: ["Flight tickets"],
+    bestTime: "November to March",
+    thingsToCarry: ["Modest clothing for Grand Mosque, sunglasses"],
+    faqs: [{ question: "Is UAE tourist visa included?", answer: "Yes, single-entry UAE 30-day tourist visa is included in our package." }],
+    reviews: [{ id: "r8", user: "Neha Agrawal", location: "Indore", rating: 4.85, comment: "Desert safari was top notch! Burj Khalifa views were amazing.", date: "2026-03-10" }],
+    rating: 4.88,
+    reviewCount: 47,
+    featured: true,
+    trending: true,
+    budgetCategory: "mid"
+  },
+  {
+    id: "pkg-dubai-2",
+    title: "Dubai Luxury Shopping & Atlantis Aquaventure Waterpark",
+    slug: "dubai-luxury-shopping-atlantis-aquaventure-waterpark",
+    type: "international",
+    parentSlug: "dubai",
+    parentName: "Dubai",
+    regionName: "Palm Jumeirah, Atlantis",
+    coverImage: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "5 Days / 4 Nights",
+    nights: 4,
+    days: 5,
+    price: 68999,
+    offerPrice: 58999,
+    discountPercent: 14,
+    description: "Stay near Palm Jumeirah with unlimited access to Atlantis Aquaventure Waterpark, Lost Chambers Aquarium, and Museum of the Future.",
+    highlights: [
+      "Full Day Unlimited Entry to Atlantis Aquaventure Waterpark",
+      "Lost Chambers Aquarium entry ticket",
+      "Museum of the Future entry ticket",
+      "Private Yacht Sunset Cruise along Dubai Marina"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Dubai Luxury Arrival & Private Yacht Cruise", description: "VIP Airport transfer. Check in at 5-star hotel. Private sunset yacht cruise along Dubai Marina.", mealsIncluded: "Dinner", overnightStay: "Atlantis The Palm / Dusit Thani Dubai" },
+      { day: 2, title: "Atlantis Aquaventure Waterpark & Aquarium", description: "Enjoy world's largest waterpark Aquaventure and marine life at Lost Chambers Aquarium.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Atlantis The Palm / Dusit Thani" },
+      { day: 3, title: "Museum of the Future & Dubai Mall Shopping", description: "Visit architectural masterpiece Museum of the Future. Afternoon gold & perfume shopping at Dubai Mall.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Dusit Thani Dubai" },
+      { day: 4, title: "Miracle Garden & Global Village", description: "Visit Dubai Miracle Garden floral displays and evening multicultural shopping at Global Village.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Dusit Thani Dubai" },
+      { day: 5, title: "Departure", description: "Breakfast and private airport transfer.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Atlantis The Palm", "Dusit Thani Dubai"],
+    meals: "Breakfast & Dinners",
+    transportation: "Private Chauffeur Sedan / SUV",
+    sightseeing: ["Atlantis Aquaventure", "Museum of Future", "Miracle Garden", "Global Village"],
+    inclusions: ["4 Nights 5-Star Stay", "Aquaventure Pass", "Museum of Future Ticket", "UAE Visa"],
+    exclusions: ["Airfare"],
+    bestTime: "October to April",
+    thingsToCarry: ["Swimwear for Aquaventure, camera"],
+    faqs: [{ question: "Is Museum of Future ticket guaranteed?", answer: "Yes, timed-entry tickets are confirmed upon booking." }],
+    reviews: [{ id: "rd2", user: "Vikrant Malhotra", location: "Delhi", rating: 5, comment: "Aquaventure waterpark was phenomenal for the kids!", date: "2026-04-18" }],
+    rating: 4.95,
+    reviewCount: 30,
+    featured: false,
+    trending: true,
+    budgetCategory: "luxury"
+  },
+
+  // THAILAND
+  {
+    id: "pkg-thailand-1",
+    title: "Exotic Thailand - Phuket, Krabi & Bangkok Fun",
+    slug: "exotic-thailand-phuket-krabi-bangkok-fun",
+    type: "international",
+    parentSlug: "thailand",
+    parentName: "Thailand",
+    regionName: "Phuket, Krabi, Bangkok",
+    coverImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "6 Days / 5 Nights",
+    nights: 5,
+    days: 6,
+    price: 36999,
+    offerPrice: 29999,
+    discountPercent: 19,
+    description: "Island hop in Phuket on speedboats, swim in Krabi's emerald waters, and explore golden temples and shopping plazas in Bangkok.",
+    highlights: [
+      "Phi Phi Island Tour by Speedboat with Lunch",
+      "Krabi 4-Islands Tour by Speedboat",
+      "Bangkok Temple Tour: Golden Buddha & Marble Temple",
+      "Chao Phraya Princess Dinner Cruise in Bangkok"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Phuket Arrival & Patong Beach", description: "Arrive in Phuket. Transfer to hotel near Patong Beach.", mealsIncluded: "Dinner", overnightStay: "Deevana Plaza / Similar, Phuket" },
+      { day: 2, title: "Phi Phi Island Speedboat Tour", description: "Speedboat ride to Maya Bay and Maya Bay snorkeling.", mealsIncluded: "Breakfast, Island Lunch & Dinner", overnightStay: "Deevana Plaza, Phuket" },
+      { day: 3, title: "Phuket to Krabi Scenic Transfer", description: "Drive to Krabi. Check in and relax on Ao Nang beach.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Panan Krabi Resort, Krabi" },
+      { day: 4, title: "Krabi 4-Islands Speedboat Excursion", description: "Visit Tup Island, Chicken Island, Poda Island, and Phra Nang Cave.", mealsIncluded: "Breakfast & Lunch", overnightStay: "Panan Krabi Resort, Krabi" },
+      { day: 5, title: "Flight to Bangkok & Chao Phraya River Cruise", description: "Fly to Bangkok. Evening luxury river cruise with live music.", mealsIncluded: "Breakfast & Cruise Dinner", overnightStay: "Amari Watergate, Bangkok" },
+      { day: 6, title: "Bangkok Temples & Departure", description: "Golden Buddha temple tour and airport drop.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Deevana Plaza Phuket", "Panan Krabi Resort", "Amari Watergate Bangkok"],
+    meals: "Breakfast Daily, 2 Island Lunches, Dinners",
+    transportation: "Private AC Vehicles + Speedboats",
+    sightseeing: ["Phi Phi Islands", "Krabi 4 Islands", "Chao Phraya Cruise", "Golden Buddha"],
+    inclusions: ["Hotels, Transfers, Speedboat Island Tours, Dinners"],
+    exclusions: ["National Park Entrance Fees"],
+    bestTime: "November to April",
+    thingsToCarry: ["Beachwear, water shoes, sunscreen"],
+    faqs: [{ question: "Is Thailand Visa Free for Indians?", answer: "Thailand currently offers Visa Exemption for Indian passport holders." }],
+    reviews: [{ id: "r9", user: "Vishal Pareek", location: "Jaipur", rating: 4.8, comment: "Speedboat tours were super energetic and hotels were right near the beach!", date: "2026-04-29" }],
+    rating: 4.82,
+    reviewCount: 35,
+    featured: true,
+    trending: true,
+    budgetCategory: "budget"
+  },
+  {
+    id: "pkg-thailand-2",
+    title: "Pattaya Coral Island & Bangkok Temple Extravaganza",
+    slug: "pattaya-coral-island-bangkok-temple-extravaganza",
+    type: "international",
+    parentSlug: "thailand",
+    parentName: "Thailand",
+    regionName: "Pattaya, Bangkok",
+    coverImage: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "5 Days / 4 Nights",
+    nights: 4,
+    days: 5,
+    price: 28999,
+    offerPrice: 22999,
+    discountPercent: 20,
+    description: "Budget friendly Thailand getaway! Speedboat trip to Coral Island Pattaya with parasailing, Alcazar cabaret show, and Bangkok Safari World & Marine Park.",
+    highlights: [
+      "Coral Island (Koh Larn) Speedboat Tour with Seafood Lunch",
+      "Alcazar Cabaret Show VIP seating in Pattaya",
+      "Bangkok Safari World & Marine Park with Lunch",
+      "Golden Buddha & Marble Temple Tour"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Bangkok Airport pick up to Pattaya", description: "Pick up at Suvarnabhumi Airport Bangkok. Drive to Pattaya resort. Evening Alcazar Cabaret Show.", mealsIncluded: "Dinner", overnightStay: "A-One Royal Cruise Hotel Pattaya" },
+      { day: 2, title: "Coral Island Speedboat Tour & Water Sports", description: "Speedboat trip to Koh Larn Coral Island. Enjoy parasailing, banana boat, and seafood buffet.", mealsIncluded: "Breakfast, Lunch & Dinner", overnightStay: "A-One Royal Cruise Hotel Pattaya" },
+      { day: 3, title: "Pattaya to Bangkok & City Temples", description: "Drive to Bangkok. Visit Wat Traimit (Golden Buddha) and Wat Benchamabophit (Marble Temple).", mealsIncluded: "Breakfast & Dinner", overnightStay: "The Berkeley Hotel Pratunam Bangkok" },
+      { day: 4, title: "Safari World & Marine Park", description: "Full day excursion to Safari World open zoo and Marine Park animal stunt shows.", mealsIncluded: "Breakfast, Lunch & Dinner", overnightStay: "The Berkeley Hotel Pratunam Bangkok" },
+      { day: 5, title: "Bangkok Shopping & Airport Departure", description: "Shopping at Pratunam night markets and drop at airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["A-One Royal Cruise Pattaya", "The Berkeley Hotel Pratunam Bangkok"],
+    meals: "Breakfast Daily + 2 Lunches & Dinners",
+    transportation: "Private AC Cab",
+    sightseeing: ["Coral Island", "Alcazar Show", "Safari World", "Golden Buddha"],
+    inclusions: ["4 Nights Accommodation", "Speedboat to Coral Island", "Safari World Tickets", "Private Cab Transfers"],
+    exclusions: ["Airfare"],
+    bestTime: "October to May",
+    thingsToCarry: ["Sunscreen, shorts, light footwear"],
+    faqs: [{ question: "Are meals suitable for vegetarians?", answer: "Yes, Indian vegetarian meals are served on all island and Safari World tours." }],
+    reviews: [{ id: "rt2", user: "Gaurav Sen", location: "Kolkata", rating: 4.8, comment: "Pratunam shopping location was super convenient!", date: "2026-05-11" }],
+    rating: 4.81,
+    reviewCount: 29,
+    featured: false,
+    trending: true,
+    budgetCategory: "budget"
+  },
+
+  // JAPAN
+  {
+    id: "pkg-japan-1",
+    title: "Classic Japan Golden Route - Tokyo, Mt Fuji, Kyoto & Osaka",
+    slug: "classic-japan-golden-route-tokyo-mt-fuji-kyoto-osaka",
+    type: "international",
+    parentSlug: "japan",
+    parentName: "Japan",
+    regionName: "Tokyo, Mt Fuji, Kyoto, Osaka",
+    coverImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "7 Days / 6 Nights",
+    nights: 6,
+    days: 7,
+    price: 159999,
+    offerPrice: 139999,
+    discountPercent: 12,
+    description: "Experience Japan's legendary Golden Route! High-speed Shinkansen bullet train rides, Mt Fuji panoramic cable cars, Fushimi Inari Torii gates in Kyoto, and Dotonbori food tour in Osaka.",
+    highlights: [
+      "JR Bullet Train (Shinkansen) experience from Tokyo to Kyoto",
+      "Mount Fuji 5th Station & Lake Kawaguchiko scenic cruise",
+      "Fushimi Inari Taisha (10,000 Vermilion Torii Gates) & Arashiyama Bamboo Grove",
+      "Tokyo Skytree 350m observation deck & Shibuya Crossing",
+      "Osaka Castle & Dotonbori Street Food walk"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Tokyo Arrival & Shibuya Lights", description: "Arrive at Tokyo Narita/Haneda Airport. Meet local English guide. Check in and evening walk across Shibuya Crossing & Harajuku.", mealsIncluded: "Dinner", overnightStay: "Keio Plaza Hotel Tokyo / Similar" },
+      { day: 2, title: "Tokyo City Tour & Skytree", description: "Visit Asakusa Senso-ji Temple, Nakamise shopping street, Imperial Palace Gardens, and Tokyo Skytree observation deck.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Keio Plaza Hotel Tokyo" },
+      { day: 3, title: "Mount Fuji & Lake Kawaguchiko Excursion", description: "Drive to Mount Fuji 5th Station (2,300m). Lake Kawaguchiko ropeway cable car ride and Oshino Hakkai traditional village.", mealsIncluded: "Breakfast & Japanese Bento Lunch & Dinner", overnightStay: "Fuji Onsen Resort / Keio Plaza Tokyo" },
+      { day: 4, title: "Shinkansen Bullet Train to Kyoto Cultural Capital", description: "Ride the 320 km/h Shinkansen Bullet Train to Kyoto. Visit Kinkaku-ji (Golden Pavilion) and Gion Geisha District.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Kyoto Century Hotel" },
+      { day: 5, title: "Kyoto Bamboo Grove & Fushimi Inari Gates", description: "Walk through Arashiyama Bamboo Grove and thousands of red Torii gates at Fushimi Inari Shrine.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Kyoto Century Hotel" },
+      { day: 6, title: "Kyoto to Osaka Castle & Dotonbori", description: "Transfer to Osaka. Tour Osaka Castle Park and evening gourmet food walk at Dotonbori canal.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Swissotel Nankai Osaka" },
+      { day: 7, title: "Departure from Osaka Kansai Airport", description: "Breakfast and airport express train to Osaka Kansai Airport for flight home.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Keio Plaza Hotel Tokyo", "Kyoto Century Hotel", "Swissotel Nankai Osaka"],
+    meals: "Breakfast Daily & Authentic Japanese/Indian Dinners",
+    transportation: "Private AC Coach + JR Shinkansen Bullet Train Ticket",
+    sightseeing: ["Tokyo Skytree", "Mt Fuji 5th Station", "Fushimi Inari", "Golden Pavilion", "Osaka Castle"],
+    inclusions: ["6 Nights 4-Star Accommodation", "Shinkansen Bullet Train Ticket", "All Entrance Tickets", "Japan Tourist Visa assistance"],
+    exclusions: ["International Flight Tickets"],
+    bestTime: "March to May (Cherry Blossom) & October to December (Autumn foliage)",
+    thingsToCarry: ["Comfortable walking shoes, plug adapter Type A/B"],
+    faqs: [{ question: "Is Japan visa assistance included?", answer: "Yes, complete document guidance for Japan E-visa / sticker visa is provided." }],
+    reviews: [{ id: "rj1", user: "Dr Ananya Roy", location: "Kolkata", rating: 5, comment: "Bullet train was super smooth and Mt Fuji views were clear!", date: "2026-05-18" }],
+    rating: 4.95,
+    reviewCount: 44,
+    featured: true,
+    trending: true,
+    budgetCategory: "luxury"
+  },
+
+  // SINGAPORE
+  {
+    id: "pkg-singapore-1",
+    title: "Glitzy Singapore Marina Bay & Sentosa Island Fun",
+    slug: "glitzy-singapore-marina-bay-sentosa-island-fun",
+    type: "international",
+    parentSlug: "singapore",
+    parentName: "Singapore",
+    regionName: "Marina Bay, Sentosa Island",
+    coverImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "5 Days / 4 Nights",
+    nights: 4,
+    days: 5,
+    price: 49999,
+    offerPrice: 41999,
+    discountPercent: 16,
+    description: "Marvel at Singapore's garden city wonders! Gardens by the Bay Flower Dome & Cloud Forest, Night Safari tram ride, and Sentosa Cable Car with S.E.A. Aquarium.",
+    highlights: [
+      "Gardens by the Bay: Flower Dome, Cloud Forest & Supertree Light Show",
+      "Sentosa Island Cable Car, Wings of Time laser show & S.E.A. Aquarium",
+      "Night Safari Tram Ride through nocturnal wildlife park",
+      "Singapore City Tour: Merlion Park, Chinatown, Little India"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Singapore Arrival & Night Safari", description: "Arrive at Changi Airport. Transfer to hotel. In the evening, visit Night Safari for nocturnal tram ride.", mealsIncluded: "Dinner", overnightStay: "Hotel Miramar / Similar, Singapore" },
+      { day: 2, title: "City Tour & Gardens by the Bay", description: "Photo stop at Merlion Park, Chinatown, and Orchid Garden. Afternoon Gardens by the Bay Flower Dome & Cloud Forest.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Hotel Miramar, Singapore" },
+      { day: 3, title: "Sentosa Island Cable Car & Wings of Time", description: "Cable car ride to Sentosa. Visit S.E.A. Aquarium, Madame Tussauds, and watch evening Wings of Time laser light show.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Hotel Miramar, Singapore" },
+      { day: 4, title: "Jewel Changi Canopy Park & Orchard Road Shopping", description: "Explore luxury shopping on Orchard Road and visit Jewel Changi HSBC Rain Vortex waterfall.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Hotel Miramar, Singapore" },
+      { day: 5, title: "Departure", description: "Breakfast and transfer to Changi Airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Hotel Miramar Singapore", "Furama Riverfront"],
+    meals: "Breakfast & Dinners",
+    transportation: "Private AC Coach",
+    sightseeing: ["Gardens by the Bay", "Sentosa Cable Car", "Night Safari", "Merlion Park"],
+    inclusions: ["4 Nights Stay", "Gardens by Bay Tickets", "Sentosa Cable Car & Shows", "Singapore Visa"],
+    exclusions: ["Airfare"],
+    bestTime: "Round the year",
+    thingsToCarry: ["Light cottons, umbrella, comfortable sneakers"],
+    faqs: [{ question: "Is Singapore Visa included?", answer: "Yes, Singapore E-visa processing is included." }],
+    reviews: [{ id: "rs1", user: "Pooja Hegde", location: "Bangalore", rating: 4.88, comment: "Supertree grove light show was magical!", date: "2026-04-02" }],
+    rating: 4.89,
+    reviewCount: 37,
+    featured: true,
+    trending: true,
+    budgetCategory: "mid"
+  },
+
+  // MALAYSIA
+  {
+    id: "pkg-malaysia-1",
+    title: "Kuala Lumpur Metropolis & Genting Highlands Skyway",
+    slug: "kuala-lumpur-metropolis-genting-highlands-skyway",
+    type: "international",
+    parentSlug: "malaysia",
+    parentName: "Malaysia",
+    regionName: "Kuala Lumpur, Genting Highlands",
+    coverImage: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "4 Days / 3 Nights",
+    nights: 3,
+    days: 4,
+    price: 26999,
+    offerPrice: 21999,
+    discountPercent: 18,
+    description: "Explore Malaysia's vibrant capital! Photo stop at iconic Petronas Twin Towers, Batu Caves golden Murugan statue, and Genting Highlands Skyway cable car.",
+    highlights: [
+      "Petronas Twin Towers observation bridge photo stop & KL Tower",
+      "Batu Caves 272 colorful steps & Lord Murugan Temple",
+      "Awana SkyWay Glass Floor Cable Car to Genting Highlands",
+      "Genting SkyWorlds Outdoor Theme Park"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Kuala Lumpur Arrival & Night Skyline", description: "Arrive at KLIA Airport. Transfer to hotel. Evening walk around Bukit Bintang night market.", mealsIncluded: "Dinner", overnightStay: "Furama Bukit Bintang KL" },
+      { day: 2, title: "Kuala Lumpur City Tour & Petronas Towers", description: "Visit Petronas Twin Towers, King's Palace, Independence Square, National Mosque, and KL Tower.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Furama Bukit Bintang KL" },
+      { day: 3, title: "Batu Caves & Genting Highlands SkyWay", description: "Visit limestone Batu Caves. Ride Awana SkyWay cable car up to Genting Highlands mountain resort and indoor casino.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Furama Bukit Bintang KL" },
+      { day: 4, title: "Shopping & KLIA Departure", description: "Breakfast, chocolates shopping at Beryl's factory, and transfer to KLIA airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Furama Bukit Bintang Kuala Lumpur"],
+    meals: "Breakfast Daily & Dinners",
+    transportation: "Private AC Cab",
+    sightseeing: ["Petronas Towers", "Batu Caves", "Genting Cable Car", "Bukit Bintang"],
+    inclusions: ["3 Nights Hotel Stay", "Genting Cable Car Ticket", "City Tour", "Malaysia e-VISA / MDAC"],
+    exclusions: ["Airfare"],
+    bestTime: "Round the year",
+    thingsToCarry: ["Modest clothes for Batu Caves temple steps"],
+    faqs: [{ question: "Is Malaysia Visa free for Indians?", answer: "Yes, Malaysia offers Visa-Free entry for Indian citizens (MDAC digital card required)." }],
+    reviews: [{ id: "rm1", user: "Suresh Nambiar", location: "Kochi", rating: 4.8, comment: "Cable car up Genting was crisp and cool!", date: "2026-03-28" }],
+    rating: 4.82,
+    reviewCount: 31,
+    featured: true,
+    trending: false,
+    budgetCategory: "budget"
+  },
+
+  // NEPAL
+  {
+    id: "pkg-nepal-1",
+    title: "Himalayan Kingdom - Kathmandu Valley & Pokhara Lake Escape",
+    slug: "himalayan-kingdom-kathmandu-valley-pokhara-lake-escape",
+    type: "international",
+    parentSlug: "nepal",
+    parentName: "Nepal",
+    regionName: "Kathmandu, Pokhara",
+    coverImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "5 Days / 4 Nights",
+    nights: 4,
+    days: 5,
+    price: 24999,
+    offerPrice: 19999,
+    discountPercent: 20,
+    description: "Discover the sacred spiritual realm of Nepal! Visit Pashupatinath Temple, Swayambhunath Monkey Temple, Sarangkot sunrise over Mt Annapurna, and boating on Phewa Lake Pokhara.",
+    highlights: [
+      "Pashupatinath Temple & Swayambhunath Stupa Darshan",
+      "Sarangkot Sunrise view of Annapurna & Machhapuchhre snow peaks",
+      "Phewa Lake Boating & Tal Barahi Temple Pokhara",
+      "Davis Falls & Gupteshwor Mahadev Cave"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Kathmandu Arrival & Pashupatinath Darshan", description: "Arrive at Tribhuvan Airport Kathmandu. Transfer to hotel. Visit sacred Pashupatinath Temple by Bagmati River.", mealsIncluded: "Dinner", overnightStay: "Hotel Radisson Kathmandu" },
+      { day: 2, title: "Kathmandu Valley Sightseeing to Pokhara", description: "Visit Swayambhunath (Monkey Temple) & Patan Durbar Square. Fly or drive to lakeside city Pokhara.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Waterfront Resort Pokhara" },
+      { day: 3, title: "Sarangkot Sunrise & Pokhara Lakes", description: "Early morning Sarangkot hill sunrise over Annapurna Himalayas. Boating on Phewa Lake, Davis Falls & Gupteshwor Cave.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Waterfront Resort Pokhara" },
+      { day: 4, title: "Pokhara to Kathmandu & Chandragiri Cable Car", description: "Return to Kathmandu. Ride Chandragiri Hills Cable Car for panorama of Mt Everest and Kathmandu valley.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Hotel Radisson Kathmandu" },
+      { day: 5, title: "Departure", description: "Breakfast, souvenir shopping at Thamel markets, and drop at Kathmandu airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Radisson Hotel Kathmandu", "Waterfront Resort Pokhara"],
+    meals: "Breakfast & Dinner Daily",
+    transportation: "Private AC Vehicle for transfers and sightseeing",
+    sightseeing: ["Pashupatinath", "Phewa Lake", "Sarangkot", "Swayambhunath", "Chandragiri Cable Car"],
+    inclusions: ["4 Nights Hotel Stay", "Breakfast & Dinners", "Phewa Lake Boat Ticket", "Chandragiri Cable Car"],
+    exclusions: ["Airfare / Flight between Kathmandu-Pokhara"],
+    bestTime: "September to November & March to May",
+    thingsToCarry: ["Warm clothes, ID proof (Voter ID or Passport for Indians)"],
+    faqs: [{ question: "Do Indian passport holders need visa for Nepal?", answer: "No, Indians do not need a visa. A valid Voter ID or Passport is sufficient." }],
+    reviews: [{ id: "rn1", user: "Pradeep Joshi", location: "Lucknow", rating: 4.85, comment: "Annapurna sunrise from Sarangkot was pure bliss!", date: "2026-05-19" }],
+    rating: 4.87,
+    reviewCount: 26,
+    featured: true,
+    trending: true,
+    budgetCategory: "budget"
+  },
+
+  // BALI
+  {
+    id: "pkg-bali-1",
+    title: "Tropical Bali Luxury Pool Villa & Nusa Penida Island Tour",
+    slug: "tropical-bali-luxury-pool-villa-nusa-penida-island-tour",
+    type: "international",
+    parentSlug: "bali",
+    parentName: "Bali",
+    regionName: "Ubud, Nusa Penida, Kuta",
+    coverImage: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "6 Days / 5 Nights",
+    nights: 5,
+    days: 6,
+    price: 44999,
+    offerPrice: 36999,
+    discountPercent: 17,
+    description: "Indulge in island luxury! Stay in a private pool villa in Ubud, swing over Tegallalang rice terraces, fast boat excursion to Nusa Penida T-Rex cliff, and Uluwatu Kecak Fire dance.",
+    highlights: [
+      "2 Nights Stay in Private Pool Villa in Ubud",
+      "Fast Boat Excursion to Nusa Penida: Kelingking Beach, Broken Beach & Angel's Billabong",
+      "Tegallalang Rice Terraces, Aloha Bali Swing & Sacred Monkey Forest",
+      "Uluwatu Temple Cliffside Kecak Fire Dance sunset show",
+      "Water sports package at Tanjung Benoa (Banana Boat & Jet Ski)"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Bali Arrival & Private Villa Check-In", description: "Arrive at Ngurah Rai Airport Denpasar. VIP pickup with flower garland. Check into private pool villa in Ubud.", mealsIncluded: "Dinner", overnightStay: "Luxury Private Pool Villa Ubud" },
+      { day: 2, title: "Ubud Rice Terraces & Bali Swing Adventure", description: "Visit Tegallalang Rice Terraces, experience famous jungle swing, Sacred Monkey Forest, and Tanah Lot Sea Temple.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Luxury Private Pool Villa Ubud" },
+      { day: 3, title: "Nusa Penida Island Fast Boat Day Tour", description: "Fast boat to Nusa Penida. Visit T-Rex shaped Kelingking Beach, Broken Beach, Angel's Billabong, and Crystal Bay.", mealsIncluded: "Breakfast, Indonesian Lunch & Dinner", overnightStay: "The Anvaya Beach Resort Seminyak" },
+      { day: 4, title: "Tanjung Benoa Water Sports & Uluwatu Sunset", description: "Water sports at Tanjung Benoa (Banana Boat, Jet Ski). Sunset at Uluwatu Cliff Temple with Kecak Fire Dance.", mealsIncluded: "Breakfast & Candlelight Seafood Dinner", overnightStay: "The Anvaya Beach Resort Seminyak" },
+      { day: 5, title: "Balinese Massage & Beach Club Sunset", description: "Complimentary 60-min Balinese Spa Therapy. Spend evening at famous Potato Head Beach Club Seminyak.", mealsIncluded: "Breakfast & Dinner", overnightStay: "The Anvaya Beach Resort Seminyak" },
+      { day: 6, title: "Departure from Bali", description: "Breakfast, souvenir shopping at Krisna Oleh Oleh, and transfer to airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Royal Kamuela Villa Ubud", "The Anvaya Beach Resort Seminyak"],
+    meals: "Breakfast Daily, 1 Island Lunch & Candlelight Dinners",
+    transportation: "Private Chauffeur Driven AC Car + Nusa Penida Fast Boat",
+    sightseeing: ["Nusa Penida", "Ubud Rice Terrace", "Uluwatu Kecak Dance", "Tanah Lot"],
+    inclusions: ["5 Nights Accommodation (2 Nights Villa)", "Nusa Penida Fast Boat Tickets", "Balinese Massage Voucher", "Water Sports Package"],
+    exclusions: ["Airfare", "Bali Tourist Levy fee"],
+    bestTime: "April to October",
+    thingsToCarry: ["Swimwear, tropical resort clothes, camera, sunscreen"],
+    faqs: [{ question: "Is Indonesia Visa on Arrival easy for Indians?", answer: "Yes, e-VOA is issued online or on arrival at Denpasar airport." }],
+    reviews: [{ id: "rb1", user: "Amitabh Singh", location: "Delhi", rating: 5, comment: "Kelingking beach was mind-blowing and pool villa was pure luxury!", date: "2026-04-20" }],
+    rating: 4.95,
+    reviewCount: 52,
+    featured: true,
+    trending: true,
+    budgetCategory: "luxury"
+  },
+
+  // MALDIVES
+  {
+    id: "pkg-maldives-1",
+    title: "Luxury Maldives Overwater Villa Paradise",
+    slug: "luxury-maldives-overwater-villa-paradise",
+    type: "international",
+    parentSlug: "maldives",
+    parentName: "Maldives",
+    regionName: "Ari Atoll, Male",
+    coverImage: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "4 Days / 3 Nights",
+    nights: 3,
+    days: 4,
+    price: 89999,
+    offerPrice: 74999,
+    discountPercent: 16,
+    description: "The ultimate romantic paradise! Direct glass-floor access into turquoise lagoons, private water villa with pool, speedboat transfers, and sunset dolphin cruise.",
+    highlights: [
+      "2 Nights Beach Villa + 1 Night Water Villa with Private Pool",
+      "Roundtrip Speedboat Transfers from Male International Airport",
+      "All Inclusive Meal Plan (Breakfast, Lunch, Dinner & Selected Beverages)",
+      "Sunset Dolphin Cruise & Snorkeling Gear rental"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Speedboat Arrival at Luxury Resort", description: "Arrive at Velana International Airport Male. Speedboat transfer to private island resort. Check into Beach Villa.", mealsIncluded: "Lunch & Dinner", overnightStay: "Sun Siyam Olhuveli / Centara Ras Fushi" },
+      { day: 2, title: "Coral Reef Snorkeling & Sunset Dolphin Cruise", description: "Explore turquoise lagoon coral reefs with complimentary snorkeling gear. Sunset dolphin search cruise.", mealsIncluded: "Breakfast, Lunch & Dinner", overnightStay: "Sun Siyam Olhuveli" },
+      { day: 3, title: "Check-in to Private Overwater Villa", description: "Transfer to icon of Maldives luxury - Private Water Villa floating over turquoise ocean waters. Relax on private sun deck.", mealsIncluded: "Breakfast, Lunch & Candlelight Dinner", overnightStay: "Overwater Villa, Sun Siyam Olhuveli" },
+      { day: 4, title: "Departure", description: "Breakfast and speedboat transfer back to Male Airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Sun Siyam Olhuveli Maldives / Centara Ras Fushi"],
+    meals: "All Inclusive (Breakfast, Lunch, Dinner & Drinks)",
+    transportation: "Roundtrip Speedboat / Seaplane Transfer",
+    sightseeing: ["Turquoise Lagoon", "Coral Reef Snorkeling", "Dolphin Cruise"],
+    inclusions: ["3 Nights 5-Star Resort Stay", "Overwater Villa Upgrade", "Speedboat Transfers", "All Inclusive Meals"],
+    exclusions: ["International Flights"],
+    bestTime: "November to April",
+    thingsToCarry: ["Resort wear, swimsuits, reef-safe sunscreen, sunglasses"],
+    faqs: [{ question: "Is Maldives Visa required for Indians?", answer: "Maldives provides free 30-day Visa on Arrival for Indian passport holders." }],
+    reviews: [{ id: "rm1", user: "Dr Rohan Mehta", location: "Mumbai", rating: 5, comment: "Stepping straight from our water villa bed into turquoise ocean was unbelievable!", date: "2026-05-10" }],
+    rating: 4.98,
+    reviewCount: 38,
+    featured: true,
+    trending: true,
+    budgetCategory: "luxury"
+  },
+
+  // VIETNAM
+  {
+    id: "pkg-vietnam-1",
+    title: "Spectacular Vietnam - Ha Long Bay Cruise, Hanoi & Golden Hands Bridge",
+    slug: "spectacular-vietnam-ha-long-bay-cruise-hanoi-golden-hands-bridge",
+    type: "international",
+    parentSlug: "vietnam",
+    parentName: "Vietnam",
+    regionName: "Hanoi, Ha Long Bay, Da Nang",
+    coverImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "6 Days / 5 Nights",
+    nights: 5,
+    days: 6,
+    price: 39999,
+    offerPrice: 32999,
+    discountPercent: 17,
+    description: "Discover Vietnam's top natural and cultural wonders! 5-Star overnight Ha Long Bay Cruise, Hanoi Train Street, Ba Na Hills cable car to the iconic Golden Hands Bridge in Da Nang.",
+    highlights: [
+      "1 Night 5-Star Luxury Cruise stay in Ha Long Bay with Kayaking & Seafood",
+      "Ba Na Hills Cable Car & Golden Hands Bridge in Da Nang",
+      "Hanoi Old Quarter Rickshaw Ride & Train Street coffee",
+      "Hoi An Ancient Town lantern-lit night walk"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Hanoi Arrival & Old Quarter Street Food", description: "Arrive at Noi Bai Airport Hanoi. Transfer to hotel. Cycle rickshaw tour around Old Quarter & Hoan Kiem Lake.", mealsIncluded: "Dinner", overnightStay: "Pan Pacific Hotel Hanoi" },
+      { day: 2, title: "Hanoi to Ha Long Bay 5-Star Luxury Cruise", description: "Drive to Ha Long Bay. Board luxury cruise ship. Kayak through Sung Sot Cave and limestone karsts. Sunset deck party & cooking class.", mealsIncluded: "Breakfast, Seafood Lunch & Dinner", overnightStay: "Paradise Elegance Cruise Ha Long Bay" },
+      { day: 3, title: "Ha Long Bay Sunrise & Flight to Da Nang", description: "Tai Chi on sun deck. Cruise through limestone islets. Disembark and fly from Hanoi to Da Nang. Check into beach resort.", mealsIncluded: "Breakfast, Brunch & Dinner", overnightStay: "Novotel Da Nang Premier" },
+      { day: 4, title: "Ba Na Hills & Iconic Golden Hands Bridge", description: "Ride world's longest cable car to Ba Na Hills. Walk across the giant stone Golden Hands Bridge and French Village.", mealsIncluded: "Breakfast & Buffet Lunch & Dinner", overnightStay: "Novotel Da Nang Premier" },
+      { day: 5, title: "Hoi An Lantern Town Heritage", description: "Visit UNESCO Hoi An Ancient Town. Ride bamboo basket boats in Cam Thanh Coconut Forest.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Novotel Da Nang Premier" },
+      { day: 6, title: "Departure", description: "Breakfast and transfer to Da Nang airport for flight home.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Pan Pacific Hanoi", "Paradise Elegance Cruise", "Novotel Da Nang Premier"],
+    meals: "Breakfast Daily, Cruise Meals & Dinners",
+    transportation: "Private AC Vehicle + 5-Star Cruise",
+    sightseeing: ["Ha Long Bay", "Golden Bridge", "Ba Na Hills", "Hoi An Lantern Town"],
+    inclusions: ["5 Nights Accommodation (1 Night Cruise)", "Ha Long Bay Kayaking", "Ba Na Hills Cable Car Ticket", "Vietnam E-Visa"],
+    exclusions: ["Airfare"],
+    bestTime: "September to April",
+    thingsToCarry: ["Comfortable sneakers, camera, light jackets"],
+    faqs: [{ question: "Is Vietnam E-Visa easy to get?", answer: "Yes, Vietnam issues 30-day single entry e-visas within 3 working days." }],
+    reviews: [{ id: "rv1", user: "Shruti Sinha", location: "Bangalore", rating: 4.9, comment: "Golden hands bridge and Ha Long Bay cruise were 10/10!", date: "2026-04-15" }],
+    rating: 4.92,
+    reviewCount: 41,
+    featured: true,
+    trending: true,
+    budgetCategory: "mid"
+  },
+
+  // SRI LANKA
+  {
+    id: "pkg-srilanka-1",
+    title: "Pearl of Indian Ocean - Kandy, Nuwara Eliya Tea Gardens & Bentota Beach",
+    slug: "pearl-of-indian-ocean-kandy-nuwara-eliya-tea-gardens-bentota-beach",
+    type: "international",
+    parentSlug: "sri-lanka",
+    parentName: "Sri Lanka",
+    regionName: "Kandy, Nuwara Eliya, Bentota",
+    coverImage: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "6 Days / 5 Nights",
+    nights: 5,
+    days: 6,
+    price: 33999,
+    offerPrice: 27999,
+    discountPercent: 17,
+    description: "Explore the tropical tear-drop island! Pinnawala Elephant Orphanage, Temple of the Tooth Kandy, blue train ride through Nuwara Eliya tea hills, Madu river boat safari & Bentota water sports.",
+    highlights: [
+      "Pinnawala Elephant Orphanage bathing session",
+      "Temple of the Sacred Tooth Relic Kandy & Cultural Dance Show",
+      "Scenic Blue Train ride through rolling Ceylon Tea Plantations",
+      "Bentota Beach Resort stay & Madu River Mangrove Boat Safari"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Colombo Arrival to Kandy Hill Capital", description: "Arrive at Bandaranaike Airport Colombo. Visit Pinnawala Elephant Orphanage on way to Kandy hill capital.", mealsIncluded: "Dinner", overnightStay: "Earl's Regency Hotel Kandy" },
+      { day: 2, title: "Kandy Temple of Tooth to Nuwara Eliya", description: "Visit Temple of Tooth and Peradeniya Botanical Gardens. Drive up to Nuwara Eliya ('Little England') past Ramboda Waterfalls.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Grand Hotel Nuwara Eliya" },
+      { day: 3, title: "Tea Factory Tour & Scenic Hill Train", description: "Tour Ceylon Tea Factory. Ride the iconic blue train through emerald hill countryside to Ella.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Grand Hotel Nuwara Eliya" },
+      { day: 4, title: "Nuwara Eliya to Bentota Beach Resort", description: "Drive down to coastal Bentota. Check into beach resort. Relax on golden sand beach.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Cinnamon Bey Beruwala / Bentota" },
+      { day: 5, title: "Madu River Safari & Sea Turtle Hatchery", description: "Boat safari through Madu River mangrove islands & cinnamon estates. Visit Kosgoda Sea Turtle Conservation.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Cinnamon Bey Beruwala" },
+      { day: 6, title: "Colombo City Tour & Airport Departure", description: "Colombo Lotus Tower, Gangaramaya Temple, Independence Square, and drop at Colombo airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Earl's Regency Kandy", "Grand Hotel Nuwara Eliya", "Cinnamon Bey Bentota"],
+    meals: "Breakfast & Dinners",
+    transportation: "Private Chauffeur Driven AC Car",
+    sightseeing: ["Pinnawala Elephants", "Temple of Tooth", "Tea Gardens", "Bentota Beach", "Madu River"],
+    inclusions: ["5 Nights Accommodation", "Ceylon Train Ride", "Madu River Boat Safari", "Sri Lanka ETA Visa"],
+    exclusions: ["Airfare"],
+    bestTime: "October to April",
+    thingsToCarry: ["Modest temple clothing, beachwear, camera"],
+    faqs: [{ question: "Is Sri Lanka ETA visa free for Indians?", answer: "Sri Lanka currently provides free ETA visa entries for Indian passport holders." }],
+    reviews: [{ id: "rsl1", user: "Nikhil Chawla", location: "Delhi", rating: 4.88, comment: "Pinnawala elephant river bath was unforgettable!", date: "2026-03-24" }],
+    rating: 4.86,
+    reviewCount: 33,
+    featured: true,
+    trending: true,
+    budgetCategory: "mid"
+  },
+
+  // TURKEY
+  {
+    id: "pkg-turkey-1",
+    title: "Grand Turkey Wonders - Istanbul Bosphorus & Cappadocia Hot Air Balloon",
+    slug: "grand-turkey-wonders-istanbul-bosphorus-cappadocia-hot-air-balloon",
+    type: "international",
+    parentSlug: "turkey",
+    parentName: "Turkey",
+    regionName: "Istanbul, Cappadocia",
+    coverImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80"
+    ],
+    duration: "7 Days / 6 Nights",
+    nights: 6,
+    days: 7,
+    price: 119999,
+    offerPrice: 99999,
+    discountPercent: 16,
+    description: "Step into fairy-tale landscapes! Hot air balloon ride at sunrise over Cappadocia fairy chimneys, stay in authentic Cave Hotel, Hagia Sophia, Blue Mosque, and Bosphorus Sunset Cruise in Istanbul.",
+    highlights: [
+      "Hot Air Balloon Ride at Sunrise over Cappadocia Fairy Chimneys",
+      "2 Nights Stay in authentic Cave Hotel in Cappadocia",
+      "Istanbul Bosphorus Sunset Cruise between Europe & Asia",
+      "Hagia Sophia, Sultanahmet Blue Mosque & Grand Bazaar tour",
+      "Goreme Open Air Museum & Kaymakli Underground City"
+    ],
+    dayItinerary: [
+      { day: 1, title: "Istanbul Arrival & Bosphorus Sunset Cruise", description: "Arrive at Istanbul Airport (IST). Transfer to hotel. Evening luxury Bosphorus boat cruise straddling Europe & Asia continents.", mealsIncluded: "Dinner", overnightStay: "Radisson Blu Pera Istanbul" },
+      { day: 2, title: "Old City Istanbul Masterpieces", description: "Guided tour of Hagia Sophia, Blue Mosque, Topkapi Palace, Hippodrome, and 4,000 shop Grand Bazaar.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Radisson Blu Pera Istanbul" },
+      { day: 3, title: "Flight to Cappadocia Fairy Chimneys", description: "Fly from Istanbul to Cappadocia. Check into magical Cave Hotel. Visit Uchisar Castle rock panorama.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Museum Hotel Cave / Artemis Cave Cappadocia" },
+      { day: 4, title: "Sunrise Hot Air Balloon Flight & Goreme Tour", description: "Early morning hot air balloon ride over fairy chimneys. Visit Goreme Open Air Museum, Pasabag Mushroom Valleys, and Pottery village.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Artemis Cave Cappadocia" },
+      { day: 5, title: "Underground City & Flight back to Istanbul", description: "Explore Kaymakli Underground City carved 8 levels deep. Evening flight back to Istanbul.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Radisson Blu Pera Istanbul" },
+      { day: 6, title: "Galata Tower & Taksim Square Walk", description: "Visit Galata Tower, Istiklal Street, and enjoy Turkish Hammam bath experience.", mealsIncluded: "Breakfast & Dinner", overnightStay: "Radisson Blu Pera Istanbul" },
+      { day: 7, title: "Departure", description: "Breakfast, Turkish delight shopping, and transfer to Istanbul Airport.", mealsIncluded: "Breakfast" }
+    ],
+    hotels: ["Radisson Blu Pera Istanbul", "Artemis Cave Hotel Cappadocia"],
+    meals: "Breakfast Daily & Dinners",
+    transportation: "Private AC Coach + Domestic Flights (Istanbul-Cappadocia)",
+    sightseeing: ["Cappadocia Hot Air Balloon", "Hagia Sophia", "Blue Mosque", "Bosphorus Cruise", "Underground City"],
+    inclusions: ["6 Nights Stay (2 Nights Cave Hotel)", "Hot Air Balloon Flight Voucher", "Domestic Flights inside Turkey", "All Sightseeing Entries", "Turkey E-Visa"],
+    exclusions: ["International Flight Tickets"],
+    bestTime: "April to June & September to November",
+    thingsToCarry: ["Jacket for early morning balloon flight, comfortable walking shoes"],
+    faqs: [{ question: "Is hot air balloon included?", answer: "Yes, hot air balloon flight with champagne toast certificate is included." }],
+    reviews: [{ id: "rtk1", user: "Anil Kapoor", location: "Delhi", rating: 5, comment: "Cappadocia balloon flight was the single greatest travel memory of my life!", date: "2026-05-01" }],
+    rating: 4.96,
+    reviewCount: 48,
+    featured: true,
+    trending: true,
+    budgetCategory: "luxury"
+  }
+];

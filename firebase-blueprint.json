@@ -1,0 +1,52 @@
+{
+  "collections": [
+    {
+      "name": "packages",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "states",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "countries",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "gallery",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "blogs",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "testimonials",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "offers",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "heroSlides",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "companyInfo",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "singletons",
+      "rules": ["public_read", "auth_write"]
+    },
+    {
+      "name": "bookings",
+      "rules": ["public_create", "auth_read", "auth_write"]
+    },
+    {
+      "name": "inquiries",
+      "rules": ["public_create", "auth_read", "auth_write"]
+    }
+  ]
+}

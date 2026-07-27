@@ -2347,42 +2347,76 @@ export const AdminDashboard: React.FC = () => {
                           </button>
                         </div>
 
-                        <div className="p-3 border border-slate-100 rounded-2xl bg-slate-50/50">
-                          <span className="font-bold text-slate-900 text-xs block mb-2">Gallery Images URLs</span>
-                          <div className="space-y-1.5">
-                            {editingPackage.galleryImages && editingPackage.galleryImages.map((imgUrl, i) => (
-                              <div key={i} className="flex items-center gap-2">
-                                <input
-                                  type="text"
-                                  value={imgUrl}
-                                  onChange={e => {
-                                    const arr = [...editingPackage.galleryImages];
-                                    arr[i] = e.target.value;
-                                    setEditingPackage({ ...editingPackage, galleryImages: arr });
-                                  }}
-                                  className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-xs"
-                                  placeholder="Image URL"
-                                />
-                                <button
-                                  type="button"
-                                  onClick={() => {
-                                    const arr = editingPackage.galleryImages.filter((_, idx) => idx !== i);
-                                    setEditingPackage({ ...editingPackage, galleryImages: arr });
-                                  }}
-                                  className="text-rose-500 hover:text-rose-700 p-1 cursor-pointer"
-                                >
-                                  <Trash2 className="w-4 h-4" />
-                                </button>
-                              </div>
-                            ))}
+                        <div className="p-4 border border-slate-100 rounded-2xl bg-slate-50/50 space-y-4">
+                          <div>
+                            <span className="font-bold text-slate-900 text-xs block">Package Gallery Photos</span>
+                            <span className="text-[10px] text-slate-500 block">Manage the visual slideshow of photos for this travel package.</span>
                           </div>
-                          <button
-                            type="button"
-                            onClick={() => setEditingPackage({ ...editingPackage, galleryImages: [...(editingPackage.galleryImages || []), ""] })}
-                            className="mt-2 text-[11px] font-bold text-[#00AEEF] hover:text-sky-600 flex items-center gap-1 cursor-pointer"
-                          >
-                            <Plus className="w-3.5 h-3.5" /> Add Gallery Image URL
-                          </button>
+
+                          {/* Visual Grid of Existing Gallery Images */}
+                          {editingPackage.galleryImages && editingPackage.galleryImages.length > 0 ? (
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                              {editingPackage.galleryImages.map((imgUrl, i) => (
+                                <div key={i} className="relative aspect-video rounded-xl overflow-hidden group border border-slate-200 bg-white shadow-xs">
+                                  {imgUrl ? (
+                                    <>
+                                      <img
+                                        src={imgUrl}
+                                        alt={`Gallery ${i}`}
+                                        className="w-full h-full object-cover"
+                                      />
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          const arr = editingPackage.galleryImages.filter((_, idx) => idx !== i);
+                                          setEditingPackage({ ...editingPackage, galleryImages: arr });
+                                        }}
+                                        className="absolute top-1.5 right-1.5 p-1 bg-rose-600 hover:bg-rose-700 text-white rounded-lg shadow-md transition-colors cursor-pointer"
+                                        title="Delete Photo"
+                                      >
+                                        <Trash2 className="w-3.5 h-3.5" />
+                                      </button>
+                                    </>
+                                  ) : (
+                                    <div className="flex flex-col items-center justify-center h-full text-slate-400 p-2 text-center text-[10px]">
+                                      <ImageIcon className="w-5 h-5 text-slate-300 mb-1" />
+                                      <span>Empty Image</span>
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          const arr = editingPackage.galleryImages.filter((_, idx) => idx !== i);
+                                          setEditingPackage({ ...editingPackage, galleryImages: arr });
+                                        }}
+                                        className="text-rose-500 hover:underline mt-1 font-semibold block cursor-pointer"
+                                      >
+                                        Remove Slot
+                                      </button>
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="border border-dashed border-slate-200 rounded-xl p-6 text-center text-slate-400">
+                              <ImageIcon className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                              <p className="text-xs">No gallery photos in this package yet.</p>
+                            </div>
+                          )}
+
+                          {/* Quick Add Gallery Image block using ImageSelector directly */}
+                          <div className="border-t border-slate-200/60 pt-3">
+                            <span className="font-bold text-slate-800 text-[11px] block mb-2">Add Photo to Package Gallery</span>
+                            <ImageSelector
+                              value=""
+                              onChange={(url) => {
+                                if (url) {
+                                  const arr = [...(editingPackage.galleryImages || []), url];
+                                  setEditingPackage({ ...editingPackage, galleryImages: arr });
+                                }
+                              }}
+                              label=""
+                            />
+                          </div>
                         </div>
                       </div>
 

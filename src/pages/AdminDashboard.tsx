@@ -196,6 +196,15 @@ export const AdminDashboard: React.FC = () => {
   const [isAddingNewPackage, setIsAddingNewPackage] = useState(false);
   const [addPackageStep, setAddPackageStep] = useState<1 | 2 | 3>(1);
   const [packageFormTab, setPackageFormTab] = useState<'overview' | 'itinerary' | 'details'>('overview');
+  const [isSavingPackage, setIsSavingPackage] = useState(false);
+  const [packageSaveError, setPackageSaveError] = useState('');
+
+  useEffect(() => {
+    if (editingPackage === null) {
+      setPackageSaveError('');
+      setIsSavingPackage(false);
+    }
+  }, [editingPackage]);
 
   // Company info form state
   const [companyForm, setCompanyForm] = useState(companyInfo);
@@ -645,45 +654,51 @@ export const AdminDashboard: React.FC = () => {
     setNewGalleryLocation('');
   };
 
-  // Debounced Auto-save for package editor
-  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    if (!editingPackage || isAddingNewPackage) return;
-    
-    if (saveTimeoutRef.current) {
-      clearTimeout(saveTimeoutRef.current);
-    }
-    
-    saveTimeoutRef.current = setTimeout(() => {
-      const calculatedDiscount = Math.round(((editingPackage.price - editingPackage.offerPrice) / editingPackage.price) * 100);
-      const updatedPkg = { ...editingPackage, discountPercent: Math.max(0, calculatedDiscount) || 0 };
-      updatePackage(updatedPkg);
-    }, 800);
-    
-    return () => {
-      if (saveTimeoutRef.current) {
-        clearTimeout(saveTimeoutRef.current);
-      }
-    };
-  }, [editingPackage, isAddingNewPackage]);
 
-  const handleSavePackageSubmit = (e: React.FormEvent) => {
+  const handleSavePackageSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editingPackage) return;
 
-    // Recalculate discount
-    const calculatedDiscount = Math.round(((editingPackage.price - editingPackage.offerPrice) / editingPackage.price) * 100);
-    const updatedPkg = { ...editingPackage, discountPercent: Math.max(0, calculatedDiscount) };
+    setIsSavingPackage(true);
+    setPackageSaveError('');
 
-    if (isAddingNewPackage) {
-      addPackage(updatedPkg);
-    } else {
-      updatePackage(updatedPkg);
+    try {
+      // Recalculate discount
+      const calculatedDiscount = Math.round(((editingPackage.price - editingPackage.offerPrice) / editingPackage.price) * 100);
+      const updatedPkg = { ...editingPackage, discountPercent: Math.max(0, calculatedDiscount) || 0 };
+
+      if (isAddingNewPackage) {
+        await addPackage(updatedPkg);
+      } else {
+        await updatePackage(updatedPkg);
+      }
+
+      setEditingPackage(null);
+      setIsAddingNewPackage(false);
+    } catch (err: any) {
+      console.error("Failed to save package:", err);
+      let errMsg = "Failed to save the package. Please try again.";
+      if (err?.message) {
+        try {
+          const parsed = JSON.parse(err.message);
+          if (parsed.error && (parsed.error.includes("Maximum document size exceeded") || parsed.error.includes("exceeded"))) {
+            errMsg = "Failed to save: The total size of images or descriptions exceeds Firestore's 1MB limit. Please choose a smaller/preset image or paste a web URL.";
+          } else {
+            errMsg = `Error: ${parsed.error}`;
+          }
+        } catch {
+          if (err.message.includes("size") || err.message.includes("exceeded")) {
+            errMsg = "Failed to save: The image is too large for the database (exceeds 1MB limit). Please upload a smaller photo, use a preset, or paste a web URL.";
+          } else {
+            errMsg = `Error: ${err.message}`;
+          }
+        }
+      }
+      setPackageSaveError(errMsg);
+    } finally {
+      setIsSavingPackage(false);
     }
-
-    setEditingPackage(null);
-    setIsAddingNewPackage(false);
   };
 
   if (!isAdminLoggedIn) {
@@ -1165,6 +1180,28 @@ export const AdminDashboard: React.FC = () => {
       {editingPackage && (
         <div className="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 space-y-4 border border-slate-100 shadow-2xl relative text-slate-800">
+            
+            {/* Loading / Saving Overlay */}
+            {isSavingPackage && (
+              <div className="absolute inset-0 bg-white/85 z-55 flex flex-col items-center justify-center rounded-3xl backdrop-blur-xs">
+                <div className="animate-spin rounded-full h-10 w-10 border-4 border-[#00AEEF] border-t-transparent"></div>
+                <p className="text-xs font-bold text-slate-700 mt-3">Saving to database, please wait...</p>
+              </div>
+            )}
+
+            {/* Error Banner */}
+            {packageSaveError && (
+              <div className="p-3.5 bg-rose-50 border border-rose-100 text-rose-600 rounded-2xl text-xs font-semibold flex items-center justify-between gap-3 animate-in slide-in-from-top-2 duration-200">
+                <span>{packageSaveError}</span>
+                <button 
+                  type="button" 
+                  onClick={() => setPackageSaveError('')}
+                  className="p-1 hover:bg-rose-100 rounded-lg cursor-pointer text-rose-500 font-bold transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
             
             {/* STEP 1: CHOOSE DOMESTIC/INTERNATIONAL */}
             {isAddingNewPackage && addPackageStep === 1 && (
@@ -2449,10 +2486,31 @@ export const AdminDashboard: React.FC = () => {
                     <div className="flex gap-2">
                       <button
                         type="button"
-                        onClick={() => setEditingPackage(null)}
+                        onClick={() => {
+                          setEditingPackage(null);
+                          setIsAddingNewPackage(false);
+                        }}
                         className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-semibold cursor-pointer"
                       >
                         Cancel
+                      </button>
+
+                      {/* Manual Save button available on all tabs */}
+                      <button
+                        type="submit"
+                        disabled={isSavingPackage}
+                        className={`bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md flex items-center gap-1.5 ${
+                          isSavingPackage ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'
+                        }`}
+                      >
+                        {isSavingPackage ? (
+                          <>
+                            <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            <span>Saving...</span>
+                          </>
+                        ) : (
+                          <span>{isAddingNewPackage ? 'Save & Create' : 'Save & Publish Tour'}</span>
+                        )}
                       </button>
 
                       {packageFormTab === 'overview' && (
@@ -2471,14 +2529,6 @@ export const AdminDashboard: React.FC = () => {
                           className="bg-[#00AEEF] hover:bg-sky-600 text-white px-5 py-2 rounded-xl text-xs font-bold cursor-pointer"
                         >
                           Next: Highlights & Stays →
-                        </button>
-                      )}
-                      {packageFormTab === 'details' && (
-                        <button
-                          type="submit"
-                          className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-xl text-xs font-bold shadow-md cursor-pointer"
-                        >
-                          Save & Publish Tour
                         </button>
                       )}
                     </div>

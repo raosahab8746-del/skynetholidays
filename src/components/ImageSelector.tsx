@@ -158,10 +158,12 @@ const GALLERY_PRESETS: GalleryPreset[] = [
   }
 ];
 
-const compressImage = (base64Str: string, maxWidth = 1024, maxHeight = 1024, quality = 0.7): Promise<string> => {
+const compressImage = (base64Str: string, maxWidth = 640, maxHeight = 480, quality = 0.4): Promise<string> => {
   return new Promise((resolve) => {
     const img = new Image();
-    img.crossOrigin = 'anonymous';
+    if (!base64Str.startsWith('data:')) {
+      img.crossOrigin = 'anonymous';
+    }
     img.src = base64Str;
     img.onload = () => {
       let width = img.width;
